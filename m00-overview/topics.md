@@ -1,0 +1,38 @@
+# Themenübersicht: Git-Workflow und GitOps
+
+- Modul 1: Versionskontrolle-Grundlagen und lokale Commits
+  - Versionskontrolle einordnen
+  - Git einrichten und ersten Commit erstellen
+  - Commit-Historie um Datei-Operationen erweitern
+- Modul 2: Commit-Historie prüfen und bereinigen
+  - Commit-Historie lesen und Revisionen abkürzen
+  - Fehler mit `commit --amend` und `reset` beheben
+  - Fehlerhafte Commit-Historie diagnostizieren
+- Modul 3: Täglichen Workflow effizient gestalten
+  - Aliases für den täglichen Git-Workflow
+  - Build-Artefakte mit `.gitignore` ausschließen
+  - Unfertige Änderungen mit `git stash` sichern
+- Modul 4: Branches und Merging beherrschen
+  - Branches erstellen, wechseln und vergleichen
+  - Branches taggen, löschen und konfliktfrei zusammenführen
+  - Merge-Konflikt herbeiführen und auflösen
+- Modul 5: Mit Remote-Repositories und GitHub zusammenarbeiten
+  - Remote-Grundlagen mit einem lokalen Remote-Repository
+  - Repository mit GitHub verbinden und Remote-Branches verwalten
+  - Fork erstellen und mit einem Upstream-Repository arbeiten
+- Modul 6: Pull Requests, Code Reviews und Verlaufsverwaltung
+  - Pull Request erstellen und Review bearbeiten
+  - Cherry-Picking und Squashing an einer präparierten Historie
+  - Branch-, Remote- und Tagging-Strategie festlegen
+- Modul 7: Git-Automatisierung mit Hooks und Actions
+  - Lokalen Git-Hook einrichten
+  - Commit-Vorlage einrichten
+  - Ersten GitHub-Actions-Workflow anlegen
+- Modul 8: Container-Grundlagen und CI/CD mit GitHub Actions
+  - Docker-Grundbegriffe anhand ausgeführter Befehle zuordnen
+  - Workflow um Tests, Caching und Service-Container erweitern
+  - Branchspezifische Aufgaben und Umgebungen konfigurieren
+- Modul 9: Infrastruktur als Code und GitOps in der Praxis
+  - Deklarative Infrastruktur und Secrets einordnen
+  - Push- vs. Pull-Bereitstellung vergleichen und lokalen GitOps-Kontrollmechanismus einrichten
+  - End-to-End-GitOps-Fluss demonstrieren

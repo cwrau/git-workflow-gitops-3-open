@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: site-greeting
+  namespace: teamsite-gitops
+data:
+  GREETING_MESSAGE: "Willkommen bei der Kodschul Team Site (GitOps-Demo)"

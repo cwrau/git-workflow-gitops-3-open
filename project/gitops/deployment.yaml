@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site-greeter
+  namespace: teamsite-gitops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: site-greeter
+  template:
+    metadata:
+      labels:
+        app: site-greeter
+    spec:
+      containers:
+        - name: http-echo
+          image: hashicorp/http-echo:1.0
+          args:
+            - "-text=$(GREETING_MESSAGE)"
+          env:
+            - name: GREETING_MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: site-greeting
+                  key: GREETING_MESSAGE
+          ports:
+            - containerPort: 5678

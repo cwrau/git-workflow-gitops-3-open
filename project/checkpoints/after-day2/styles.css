@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+header {
+  background-color: #1c3d5a;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffd166;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer,
+main p:last-child {
+  text-align: center;
+  opacity: 0.7;
+}
