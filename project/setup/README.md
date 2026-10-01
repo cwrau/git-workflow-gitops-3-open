@@ -1,11 +1,20 @@
 # Vorbereitung für Tag 3 (Windows, Git Bash)
 
-Alle Befehle laufen in Git Bash, im Ordner des geklonten Handouts. Die Skripte sparen das Abtippen; die Blöcke weiter unten lassen sich kopieren.
+Alle Befehle laufen in Git Bash, ausgehend vom Home-Verzeichnis (`~`). Die Skripte sparen das Abtippen; die Blöcke lassen sich kopieren.
+
+## 0. Aktuellen Stand des Handouts holen
+
+Das Handout aus Tag 1 und 2 bleibt unverändert liegen. Der Stand für Tag 3 kommt in einen eigenen Ordner `handout`:
+
+```bash
+cd ~
+git clone https://github.com/cwrau/git-workflow-gitops-3-open handout
+```
 
 ## 1. Werkzeuge: kind und kubectl
 
 ```bash
-bash project/setup/install-tools.sh
+bash ~/handout/project/setup/install-tools.sh
 source ~/.bashrc
 ```
 
@@ -23,7 +32,7 @@ kubectl get nodes
 Auf GitHub ein leeres, öffentliches Repository `teamsite` anlegen, dann:
 
 ```bash
-bash project/setup/teamsite-repo.sh <github-konto>
+bash ~/handout/project/setup/teamsite-repo.sh <github-konto>
 cd ~/teamsite
 ```
 
@@ -38,20 +47,20 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-Manifeste in das Repository `teamsite` übernehmen (`<handout>` ist der Ordner des geklonten Handouts):
+Manifeste in das Repository `teamsite` übernehmen:
 
 ```bash
 cd ~/teamsite
 mkdir -p project
-cp -r <handout>/project/gitops project/gitops
+cp -r ~/handout/project/gitops project/gitops
 git add project/gitops
 git commit -m "GitOps-Manifeste ergänzen"
 git push
 ```
 
-Application anwenden: `<handout>/project/gitops-bootstrap/argocd-application.yaml` öffnen, `repoURL` auf `https://github.com/<github-konto>/teamsite.git` setzen und anwenden:
+Application anwenden: `~/handout/project/gitops-bootstrap/argocd-application.yaml` öffnen, `repoURL` auf `https://github.com/<github-konto>/teamsite.git` setzen und anwenden:
 
 ```bash
-kubectl apply -f <handout>/project/gitops-bootstrap/argocd-application.yaml
+kubectl apply -f ~/handout/project/gitops-bootstrap/argocd-application.yaml
 kubectl get applications -n argocd
 ```

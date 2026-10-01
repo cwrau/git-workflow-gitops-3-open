@@ -1,10 +1,10 @@
 #!/bin/bash
 # Legt das Repository teamsite mit dem Stand nach Tag 2 an und pusht es nach GitHub.
-# Aufruf: bash project/setup/teamsite-repo.sh <github-konto>
+# Aufruf: bash ~/handout/project/setup/teamsite-repo.sh <github-konto>
 # Vorher auf GitHub ein leeres, öffentliches Repository "teamsite" anlegen.
 set -euo pipefail
 
-konto="${1:?Aufruf: bash project/setup/teamsite-repo.sh <github-konto>}"
+konto="${1:?Aufruf: bash ~/handout/project/setup/teamsite-repo.sh <github-konto>}"
 src="$(cd "$(dirname "$0")/.." && pwd)/checkpoints/after-day2"
 dest="$HOME/teamsite"
 
