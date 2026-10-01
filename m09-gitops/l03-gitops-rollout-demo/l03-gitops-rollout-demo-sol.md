@@ -27,6 +27,13 @@ kubectl get applications -n argocd -w
 Erwartete Abfolge: `teamsite-gitops` wechselt kurzzeitig auf `OutOfSync`, danach automatisch zurück auf `Synced`, `Healthy`.
 
 ```bash
+git rev-parse HEAD
+kubectl get application teamsite-gitops -n argocd -o jsonpath='{.status.sync.revision}'
+```
+
+Beide Ausgaben zeigen denselben Commit-Hash: Argo CD hat genau diesen Stand synchronisiert.
+
+```bash
 kubectl rollout status deployment/site-greeter -n teamsite-gitops
 kubectl get pods -n teamsite-gitops
 ```

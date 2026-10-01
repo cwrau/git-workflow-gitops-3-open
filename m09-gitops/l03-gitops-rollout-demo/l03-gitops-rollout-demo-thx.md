@@ -17,9 +17,9 @@ Eine Änderung im Referenzprojekt vorbereiten, per Git-Commit ausrollen lassen u
 </details>
 
 <details>
-<summary>Woran erkennt man zuverlässig, dass eine Bereitstellung tatsächlich über Git und nicht manuell erfolgt ist?</summary>
+<summary>Wie lässt sich nachweisen, dass genau dieser Commit im Cluster angekommen ist?</summary>
 
-Der aktuell laufende Zustand entspricht exakt dem zuletzt committeten Manifest-Inhalt, nachvollziehbar über `git log` und den Application-Status in Argo CD, ohne dass ein manueller `kubectl apply`-Aufruf nötig war.
+Argo CD speichert den synchronisierten Commit im Application-Status. `kubectl get application teamsite-gitops -n argocd -o jsonpath='{.status.sync.revision}'` liefert den Hash, er muss mit `git rev-parse HEAD` übereinstimmen. Ein gleicher Text im Pod allein beweist das nicht, denn er könnte auch per `kubectl apply` gesetzt worden sein.
 
 </details>
 
