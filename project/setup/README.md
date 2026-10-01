@@ -40,16 +40,21 @@ Das Skript kopiert den Stand nach Tag 2 (`project/checkpoints/after-day2/`) nach
 
 ## 3. Argo CD und GitOps-Manifeste (Lab 9.2)
 
-Argo CD installieren:
+Argo CD installieren (mit `kind`-Cluster aus Schritt 1) und die Manifeste in das Repository `teamsite` übernehmen:
+
+```bash
+bash ~/handout/project/setup/install-argocd.sh
+bash ~/handout/project/setup/gitops-manifests.sh
+```
+
+`install-argocd.sh` legt den Namespace `argocd` an, installiert Argo CD mit `--server-side --force-conflicts` (nötig wegen der großen ApplicationSet-CRD) und wartet, bis alle Deployments verfügbar sind. Mit `ARGOCD_VERSION=<tag> bash …` lässt sich eine feste Version statt `stable` pinnen. `gitops-manifests.sh` kopiert `project/gitops` nach `~/teamsite`, committet und pusht.
+
+Dieselben Schritte von Hand:
 
 ```bash
 kubectl create namespace argocd
 kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-```
 
-Manifeste in das Repository `teamsite` übernehmen:
-
-```bash
 cd ~/teamsite
 mkdir -p project
 cp -r ~/handout/project/gitops project/gitops
