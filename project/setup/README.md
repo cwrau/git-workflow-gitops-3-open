@@ -44,7 +44,7 @@ Argo CD installieren:
 
 ```bash
 kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
 Manifeste in das Repository `teamsite` übernehmen:
@@ -64,3 +64,38 @@ Application anwenden: `~/handout/project/gitops-bootstrap/argocd-application.yam
 kubectl apply -f ~/handout/project/gitops-bootstrap/argocd-application.yaml
 kubectl get applications -n argocd
 ```
+
+## 4. Kopiervorlagen für Tag 3
+
+Alles zum Selbstschreiben steht auf den Folien; diese Dateien sparen das Abtippen. Ausgeführt im Repository `~/teamsite`:
+
+```bash
+cd ~/teamsite
+```
+
+Lab 7.1, Hook:
+
+```bash
+cp ~/handout/project/setup/snippets/pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+Lab 7.2, Commit-Vorlage:
+
+```bash
+cp ~/handout/project/setup/snippets/gitmessage.txt .gitmessage.txt
+git config commit.template .gitmessage.txt
+```
+
+Lab 7.3, 8.2 und 8.3, Workflow (jeweils der Stand des Labs):
+
+```bash
+mkdir -p .github/workflows
+cp ~/handout/project/setup/snippets/lint-7.3.yaml .github/workflows/lint.yaml
+# Lab 8.2:
+cp ~/handout/project/setup/snippets/lint-8.2.yaml .github/workflows/lint.yaml
+# Lab 8.3:
+cp ~/handout/project/setup/snippets/lint-8.3.yaml .github/workflows/lint.yaml
+```
+
+Die Dateien haben LF-Zeilenenden (`.gitattributes`), damit der Hook unter Windows läuft.

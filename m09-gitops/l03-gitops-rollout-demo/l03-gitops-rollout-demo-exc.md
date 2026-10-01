@@ -11,7 +11,7 @@ Der eingerichtete Argo-CD-Kontrollmechanismus aus Lab 9.2, mit synchronisierter 
 1. Den Wert `GREETING_MESSAGE` in `project/gitops/kustomization.yaml` auf einen neuen, selbst gewählten Text ändern (z. B. mit dem eigenen Namen oder Kursdatum).
 2. Die Änderung committen und pushen.
 3. Mit `kubectl get applications -n argocd -w` beobachten, wie die Application kurzzeitig auf "OutOfSync" wechselt und danach automatisch wieder "Synced" wird.
-4. Mit `kubectl get pods -n teamsite-gitops` bestätigen, dass ein neuer Pod den vorherigen ersetzt hat.
+4. Mit `kubectl rollout status deployment/site-greeter -n teamsite-gitops` und `kubectl get pods -n teamsite-gitops` bestätigen, dass ein neuer Pod den vorherigen ersetzt hat.
 5. Über `kubectl port-forward` und `curl` (oder einen Browser-Aufruf auf `localhost:8080`) bestätigen, dass der neue Begrüßungstext tatsächlich ausgeliefert wird.
 
 ## Beobachtbarer Checkpoint

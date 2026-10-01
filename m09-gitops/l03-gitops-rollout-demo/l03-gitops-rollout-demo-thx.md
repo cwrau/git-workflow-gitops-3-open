@@ -48,6 +48,7 @@ git commit -m "Begrüßungstext für die GitOps-Demo aktualisieren"
 git push
 
 kubectl get applications -n argocd -w
+kubectl rollout status deployment/site-greeter -n teamsite-gitops
 kubectl get pods -n teamsite-gitops
 
 kubectl port-forward svc/site-greeter -n teamsite-gitops 8080:80

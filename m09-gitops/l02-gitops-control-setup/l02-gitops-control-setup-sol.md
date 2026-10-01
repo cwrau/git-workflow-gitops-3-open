@@ -8,7 +8,7 @@ Der bisherige GitHub-Actions-Workflow verbindet sich aktiv zu einem Zielsystem (
 
 ```bash
 kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
 ## Aufgabe 3-4: Manifeste und Application einrichten

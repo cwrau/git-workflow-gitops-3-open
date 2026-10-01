@@ -1,0 +1,6 @@
+#!/bin/sh
+if grep -r "console.log" --include="*.js" .; then
+  echo "Commit abgelehnt: console.log gefunden."
+  exit 1
+fi
+exit 0

@@ -5,7 +5,7 @@ layout: default
 
 # Lab 8.2: Workflow um Tests, Caching und Service-Container erweitern
 
-Den bestehenden GitHub-Actions-Workflow um einen echten Testschritt, Abhängigkeits-Caching und einen Service-Container erweitern.
+Den bestehenden GitHub-Actions-Workflow um Testschritte, Abhängigkeits-Caching und einen Service-Container erweitern.
 
 **Leitfragen:**
 
@@ -48,6 +48,9 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -82,4 +85,4 @@ jobs:
 - Caching spart wiederkehrende Ladezeit über mehrere Workflow-Läufe hinweg.
 - Service-Container stellen zusätzliche Dienste bereit, ohne den eigentlichen Job-Container zu verändern.
 
-Die Übung erweitert den bestehenden Workflow um echte Prüfungen, Caching und einen erreichbaren Service-Container.
+Die Übung erweitert den bestehenden Workflow um Prüfungen, Caching und einen erreichbaren Service-Container.

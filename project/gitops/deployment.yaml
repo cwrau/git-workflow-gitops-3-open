@@ -26,3 +26,13 @@ spec:
                   key: GREETING_MESSAGE
           ports:
             - containerPort: 5678
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5678
+          resources:
+            requests:
+              cpu: 10m
+              memory: 16Mi
+            limits:
+              memory: 32Mi

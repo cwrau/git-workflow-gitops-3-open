@@ -50,6 +50,9 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -76,5 +79,6 @@ jobs:
 - Eine Workflow-Datei beschreibt Trigger, Jobs und Steps in YAML.
 - `.github/workflows/` ist der feste, von GitHub erwartete Ort für diese Dateien.
 - GitHub Pages veröffentlicht die statische Site direkt aus dem Repository, ohne separates Hosting.
+- Ein Check wird erst verbindlich, wenn er im Branch-Schutz als "Required status check" eingetragen ist (Repository-Einstellungen); sonst lässt er sich beim Merge ignorieren.
 
 Die Übung legt einen ersten Lint-Workflow an und aktiviert GitHub Pages für die Kodschul Team Site.

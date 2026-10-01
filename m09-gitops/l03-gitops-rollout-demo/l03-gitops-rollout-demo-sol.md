@@ -27,6 +27,7 @@ kubectl get applications -n argocd -w
 Erwartete Abfolge: `teamsite-gitops` wechselt kurzzeitig auf `OutOfSync`, danach automatisch zurück auf `Synced`, `Healthy`.
 
 ```bash
+kubectl rollout status deployment/site-greeter -n teamsite-gitops
 kubectl get pods -n teamsite-gitops
 ```
 
