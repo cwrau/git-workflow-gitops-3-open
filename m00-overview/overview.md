@@ -52,13 +52,13 @@ Sichtbarer Abschluss (Modul 9, Lab 9.3): ein selbst durchgeführter End-to-End-R
 Jedes der neun Module besteht aus genau drei Labs (Theorie, Übung, Lösung):
 
 ```text
-output/mXX-<modul>/
+mXX-<modul>/
 ├── l01-<lab>/  (l01-<lab>-thx.md, -exc.md, -sol.md)
 ├── l02-<lab>/
 └── l03-<lab>/
 ```
 
-Das gemeinsame Referenzprojekt liegt in `output/project/`:
+Das gemeinsame Referenzprojekt liegt in `project/`:
 
 | Ordner | Inhalt |
 | --- | --- |

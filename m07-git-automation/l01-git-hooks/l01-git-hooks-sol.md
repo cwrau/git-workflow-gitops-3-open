@@ -20,7 +20,7 @@ chmod +x .git/hooks/pre-commit
 ## Aufgabe 3: Fehlschlagenden Commit provozieren
 
 ```bash
-# app.js: eine Zeile "console.log('test');" ergaenzen
+# app.js: eine Zeile "console.log('test');" ergänzen
 git add app.js
 git commit -m "Test-Commit mit console.log"
 ```
@@ -32,19 +32,10 @@ Erwartete Ausgabe: der Hook gibt "Commit abgelehnt: console.log gefunden." aus, 
 ```bash
 # console.log-Zeile wieder entfernen
 git add app.js
-git commit -m "app.js unveraendert lassen (Hook-Test)"
+git commit -m "app.js unverändert lassen (Hook-Test)"
 ```
 
 Der Hook findet keinen Treffer, gibt keine Ausgabe aus und der Commit wird normal erstellt.
-
-## Aufgabe 5: Historie prüfen
-
-```bash
-git log -1
-git log --all -p -- app.js | grep "console.log"
-```
-
-Die zweite Zeile liefert keine Treffer - keine `console.log`-Zeile ist Teil der Historie von `app.js`.
 
 ## Erweiterung (Beispielantwort)
 
@@ -61,7 +52,7 @@ fi
 exit 0
 ```
 
-Ein Testfall mit einem `<!-- TODO: pruefen -->`-Kommentar in `index.html` wird durch die zweite Prüfung ebenfalls abgelehnt.
+Ein Testfall mit einem `<!-- TODO: prüfen -->`-Kommentar in `index.html` wird durch die zweite Prüfung ebenfalls abgelehnt.
 
 ## Grenzen dieses Hooks
 

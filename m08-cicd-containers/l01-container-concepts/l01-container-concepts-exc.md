@@ -13,17 +13,15 @@ Eine funktionsfähige lokale Docker-Installation (`docker --version` liefert ein
 3. `docker images` ausführen und bestätigen, dass `alpine` in der lokalen Image-Liste erscheint.
 4. `docker run alpine:3.22 echo "Hallo aus dem Container"` ausführen und die Ausgabe notieren.
 5. `docker ps -a` ausführen und den soeben beendeten Container in der Liste identifizieren.
-6. Eine Tabelle erstellen: Befehl, beobachtete Ausgabe (kurz zusammengefasst), zugeordneter Begriff (Image, Container oder Registry).
 
 ## Beobachtbares Ergebnis
 
-Eine ausgefüllte Tabelle mit vier Zeilen (je einer pro Befehl aus Aufgabe 2-5), die die tatsächlich beobachtete Ausgabe korrekt einem der drei Begriffe zuordnet.
+`docker images` listet `alpine`; `docker ps -a` zeigt den beendeten Container mit Status "Exited".
 
 ## Abschlusskriterien
 
-- Jede der vier Zeilen nennt einen konkreten, tatsächlich beobachteten Ausgabe-Bestandteil, keine allgemeine Beschreibung.
-- Der Unterschied zwischen `docker images` (Image) und `docker ps -a` (Container) ist in der Zuordnung korrekt erkennbar.
-- `docker pull` ist korrekt der Registry zugeordnet, nicht dem Image selbst.
+- Der Unterschied zwischen `docker images` (Image) und `docker ps -a` (Container) ist an der Ausgabe erklärbar.
+- `docker pull` lädt aus der Registry, nicht aus dem lokalen Image.
 
 ## Erweiterung (optional)
 
@@ -31,4 +29,4 @@ Eine ausgefüllte Tabelle mit vier Zeilen (je einer pro Befehl aus Aufgabe 2-5),
 
 ## Fallback
 
-Ohne lokale Docker-Installation: die in der Lösung dokumentierten Beispiel-Ausgaben als Grundlage für die Zuordnungstabelle verwenden, anstelle tatsächlich selbst ausgeführter Befehle.
+Ohne lokale Docker-Installation: die in der Lösung dokumentierten Beispiel-Ausgaben anstelle tatsächlich selbst ausgeführter Befehle verwenden.

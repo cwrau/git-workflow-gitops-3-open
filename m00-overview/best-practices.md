@@ -118,7 +118,7 @@ Modulübergreifende Praktiken, die im Kurs wiederholt angewendet werden. Jede Pr
 
 - Begründung: ein Git-Repository ist vollständig historisiert - ein einmal committeter Wert bleibt auffindbar, auch nach späterem Entfernen.
 - Konsequenz bei Nichtbeachtung: ein einmal committetes Secret gilt als kompromittiert und muss ausgetauscht werden, unabhängig von späteren Löschversuchen.
-- Beispiel im Kurs: Lab 9.1 ordnet genau diesen Unterschied anhand von Beispielen ein; `configmap.yaml` enthält bewusst nur einen harmlosen Begrüßungstext.
+- Beispiel im Kurs: Lab 9.1 ordnet genau diesen Unterschied anhand von Beispielen ein; `kustomization.yaml` enthält bewusst nur einen harmlosen Begrüßungstext.
 - Bezug: Modul 9.
 
 ## Bei GitOps das Git-Repository als einzige Wahrheit behandeln
@@ -160,6 +160,6 @@ Modulübergreifende Praktiken, die im Kurs wiederholt angewendet werden. Jede Pr
 
 - Begründung: eine GitOps-`Application`-Definition, die im eigenen Sync-Pfad liegt, würde vom Kontrollmechanismus als Teil des zu verwaltenden Zustands mitbehandelt.
 - Konsequenz bei Nichtbeachtung: unklare Grenze zwischen "einmalig manuell angewendet" und "laufend automatisiert verwaltet".
-- Beispiel im Kurs: `argocd-application.yaml` liegt in `output/project/gitops-bootstrap/`, nicht im überwachten `output/project/gitops/`.
+- Beispiel im Kurs: `argocd-application.yaml` liegt in `project/gitops-bootstrap/`, nicht im überwachten `project/gitops/`.
 - Bezug: Modul 9.
 

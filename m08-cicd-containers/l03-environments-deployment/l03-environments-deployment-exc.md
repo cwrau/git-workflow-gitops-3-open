@@ -1,6 +1,6 @@
 # Lab 8.3 - Übung: Branchspezifische Aufgaben und Umgebungen konfigurieren
 
-Diese Übung erweitert `.github/workflows/lint.yml` um einen zusätzlichen, branchabhängigen Job.
+Diese Übung erweitert `.github/workflows/lint.yaml` um einen zusätzlichen, branchabhängigen Job.
 
 ## Ausgangslage
 
@@ -13,7 +13,6 @@ Das `teamsite`-Repository mit dem erweiterten Workflow aus Lab 8.2, auf `main`.
 3. Im neuen Job einen Step ergänzen, der eine simulierte Bereitstellung ausgibt (z. B. den aktuellen Commit-Hash in einer Textausgabe).
 4. Die Änderung committen und nach `main` pushen; unter "Actions" bestätigen, dass `deploy-staging` als "skipped" markiert ist, da `main` nicht `staging` ist.
 5. Einen neuen Branch `staging` anlegen, den aktuellen Stand von `main` dorthin pushen, und unter "Actions" bestätigen, dass `deploy-staging` diesmal tatsächlich ausgeführt wird.
-6. Den simulierten Bereitstellungs-Text aus dem Workflow-Lauf in 1-2 Sätzen mit dem tatsächlichen `git log -1`-Stand vergleichen.
 
 ## Beobachtbarer Checkpoint
 
@@ -22,8 +21,8 @@ Ein Workflow-Lauf auf `main` zeigt `deploy-staging` als "skipped"; ein Workflow-
 ## Abschlusskriterien
 
 - `deploy-staging` läuft ausschließlich auf dem Branch `staging`, nicht auf `main`.
-- Der Job ist korrekt von `test` abhängig (läuft nicht parallel, sondern danach).
-- Die simulierte Bereitstellungsausgabe entspricht dem tatsächlichen aktuellen Commit-Hash.
+- Der Job ist korrekt von `test` abhängig (`needs: test`).
+- Die Umgebung `staging` ist in den Repository-Einstellungen angelegt und im Job eingetragen.
 
 ## Erweiterung (optional)
 

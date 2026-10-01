@@ -54,7 +54,7 @@ Weicht der tatsächliche Zustand vom im Git-Repository beschriebenen Zustand ab 
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-kubectl apply -f output/project/gitops-bootstrap/argocd-application.yaml
+kubectl apply -f project/gitops-bootstrap/argocd-application.yaml
 ```
 
 Die genaue Installationsanleitung und Oberfläche von Argo CD sind vor Kursbeginn gegen die aktuell installierte Version zu prüfen; die grundlegenden Konzepte (Application-Objekt, automatisierte Synchronisation) sind über Versionen hinweg stabil geblieben.
@@ -70,4 +70,4 @@ Die genaue Installationsanleitung und Oberfläche von Argo CD sind vor Kursbegin
 - Argo CD gleicht den Cluster-Zustand kontinuierlich an das im Git-Repository beschriebene Ziel an.
 - Self-Healing macht manuelle, undokumentierte Änderungen am Cluster wirkungslos.
 
-Die Übung richtet Argo CD lokal ein und verbindet es mit den Manifesten aus `output/project/gitops/`.
+Die Übung richtet Argo CD lokal ein und verbindet es mit den Manifesten aus `project/gitops/`.

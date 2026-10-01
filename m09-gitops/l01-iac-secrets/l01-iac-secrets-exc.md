@@ -17,17 +17,15 @@ Sechs kurze Beispielbeschreibungen (siehe Aufgabe 1).
    e. Ein API-Schlüssel steht im Klartext in einer committeten YAML-Datei.
    f. Ein API-Schlüssel wird über ein separates, nicht versioniertes Secret-Objekt eingebunden.
 3. Für jedes der sechs Beispiele in 1-2 Sätzen begründen, welches konkrete Merkmal zur jeweiligen Einordnung geführt hat.
-4. Die eigenen Begründungen mit den in `output/project/gitops/configmap.yaml` und `output/project/gitops/deployment.yaml` verwendeten Werten abgleichen und bestätigen, dass dort keine geheimen Werte enthalten sind.
 
 ## Beobachtbares Ergebnis
 
-Eine ausgefüllte Tabelle mit sechs Zeilen (Beispiel, Einordnung, Begründung) sowie eine kurze Bestätigung aus Aufgabe 4.
+Eine ausgefüllte Tabelle mit sechs Zeilen (Beispiel, Einordnung, Begründung).
 
 ## Abschlusskriterien
 
 - Alle sechs Beispiele sind korrekt eingeordnet.
 - Jede Begründung nennt ein konkretes Merkmal (z. B. "beschreibt Zielzustand" statt "wirkt deklarativ").
-- Die Prüfung der Manifeste in Aufgabe 4 bestätigt korrekt, dass keine Secrets enthalten sind.
 
 ## Erweiterung (optional)
 

@@ -52,7 +52,7 @@ Erwartete Ausgabe: "nothing to commit, working tree clean".
 
 ## Endstand der Dateien
 
-Der finale Stand entspricht `output/project/checkpoints/after-m1/`: `index.html` (mit `app.js`-Referenz und Team-Link), `styles.css`, `app.js`, `team.html`. `script.js` und `notes-todo.txt` existieren nicht mehr.
+Der finale Stand entspricht `project/checkpoints/after-m1/`: `index.html` (mit `app.js`-Referenz und Team-Link), `styles.css`, `app.js`, `team.html`. `script.js` und `notes-todo.txt` existieren nicht mehr.
 
 ## Erweiterung (Beispielantwort)
 

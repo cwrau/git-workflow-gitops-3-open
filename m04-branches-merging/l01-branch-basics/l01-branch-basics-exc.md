@@ -1,6 +1,6 @@
 # Lab 4.1 - Übung: Branches erstellen, wechseln und vergleichen
 
-Diese Übung arbeitet im `teamsite`-Repository (Stand nach Tag 1: `output/project/checkpoints/after-day1/`).
+Diese Übung arbeitet im `teamsite`-Repository (Stand nach Tag 1: `project/checkpoints/after-day1/`).
 
 ## Ausgangslage
 

@@ -14,15 +14,15 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ## Aufgabe 3-4: Manifeste und Application einrichten
 
 ```bash
-git add output/project/gitops/
-git commit -m "GitOps-Manifeste ergaenzen"
+git add project/gitops/
+git commit -m "GitOps-Manifeste ergänzen"
 git push
 ```
 
 `argocd-application.yaml`, Feld `repoURL`, mit der tatsächlichen HTTPS- oder SSH-URL des eigenen `teamsite`-Repositorys ausfüllen, danach:
 
 ```bash
-kubectl apply -f output/project/gitops-bootstrap/argocd-application.yaml
+kubectl apply -f project/gitops-bootstrap/argocd-application.yaml
 ```
 
 ## Aufgabe 5-6: Status prüfen
@@ -45,14 +45,14 @@ kubectl get pods -n teamsite-gitops
 
 Unmittelbar nach dem Skalierungsbefehl erscheinen zwei Pods; nach kurzer Zeit (abhängig vom konfigurierten Synchronisationsintervall) reduziert Argo CD die Anzahl automatisch wieder auf den in `deployment.yaml` beschriebenen Zielwert von 1.
 
-## Erweiterung (Beispielantwort)
+## Aufgabe 8: Dienst aufrufen
 
 ```bash
 kubectl port-forward svc/site-greeter -n teamsite-gitops 8080:80
 curl localhost:8080
 ```
 
-Erwartete Ausgabe: der in `configmap.yaml` hinterlegte Begrüßungstext.
+Erwartete Ausgabe: der in `kustomization.yaml` hinterlegte Begrüßungstext.
 
 ## Hinweis zur Versionsabhängigkeit
 

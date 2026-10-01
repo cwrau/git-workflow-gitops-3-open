@@ -41,7 +41,7 @@ Ein Git-Repository ist vollständig historisiert und oft mehreren Personen zugä
 | Ein API-Schlüssel steht im Klartext in einer committeten `deployment.yaml` | unsicheres Secret-Handling |
 | Ein API-Schlüssel wird über ein separates, nicht versioniertes Secret-Objekt eingebunden | angemessenes Secret-Handling |
 
-Die in diesem Kurs verwendeten Manifeste (`output/project/gitops/`) enthalten ausschließlich nicht-geheime Konfigurationswerte (z. B. eine Begrüßungsnachricht) - echte Secrets sind hier bewusst nicht Teil der Übung.
+Die in diesem Kurs verwendeten Manifeste (`project/gitops/`) enthalten ausschließlich nicht-geheime Konfigurationswerte (z. B. eine Begrüßungsnachricht) - echte Secrets sind hier bewusst nicht Teil der Übung.
 
 - Eine ConfigMap ist für nicht-geheime Werte gedacht; ein Kubernetes-Secret ist lediglich Base64-kodiert, nicht verschlüsselt, und daher allein kein ausreichender Schutz.
 - Für produktiv genutzte Secrets sind zusätzliche Werkzeuge (z. B. verschlüsselte Secret-Objekte oder externe Vaults) üblich.

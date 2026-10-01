@@ -1,6 +1,6 @@
 # Lab 7.1 - Übung: Lokalen Git-Hook einrichten
 
-Diese Übung arbeitet im `teamsite`-Repository (Stand nach Tag 2: `output/project/checkpoints/after-day2/`).
+Diese Übung arbeitet im `teamsite`-Repository (Stand nach Tag 2: `project/checkpoints/after-day2/`).
 
 ## Ausgangslage
 
@@ -12,7 +12,6 @@ Das `teamsite`-Repository, sauberes Arbeitsverzeichnis, auf `main`.
 2. Den Hook mit `chmod +x .git/hooks/pre-commit` ausführbar machen.
 3. In `app.js` testweise eine `console.log`-Zeile ergänzen und versuchen, sie zu committen; den abgelehnten Commit dokumentieren (Ausgabe des Hooks notieren).
 4. Die `console.log`-Zeile wieder entfernen und erneut versuchen zu committen; den erfolgreichen Commit bestätigen.
-5. Mit `git log -1` bestätigen, dass kein Commit mit der `console.log`-Zeile in der Historie gelandet ist.
 
 ## Beobachtbarer Checkpoint
 
@@ -22,7 +21,7 @@ Der Commit-Versuch aus Aufgabe 3 schlägt sichtbar fehl (Hook-Ausgabe plus abgeb
 
 - Der Hook lehnt einen Commit mit `console.log` in einer `.js`-Datei zuverlässig ab.
 - Der Hook lässt einen Commit ohne `console.log` unverändert durch.
-- Kein `console.log`-Rückstand befindet sich in der finalen Historie.
+- Der erfolgreiche Commit aus Aufgabe 4 enthält keine `console.log`-Zeile.
 
 ## Erweiterung (optional)
 

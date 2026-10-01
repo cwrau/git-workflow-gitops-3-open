@@ -44,7 +44,8 @@ Ein echter Test prüft tatsächliches Verhalten (z. B. Vorhandensein bestimmter 
 name: Test und Lint
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -62,11 +63,11 @@ jobs:
         with:
           path: .cache
           key: teamsite-cache-v1
-      - name: Pruefen, ob Startseite existiert
+      - name: Prüfen, ob Startseite existiert
         run: test -f index.html
-      - name: Pruefen, ob Titel im HTML vorkommt
+      - name: Prüfen, ob Titel im HTML vorkommt
         run: grep -q "<title>" index.html
-      - name: Service-Container erreichbar pruefen
+      - name: Service-Container erreichbar prüfen
         run: curl -sf http://localhost:8080/get
 ```
 

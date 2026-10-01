@@ -21,7 +21,7 @@ Erwartete Ausgabe (sinngemäß): `Initialized empty Git repository in .../teamsi
 
 ## Aufgabe 3: Startdateien kopieren
 
-Die vier Dateien `index.html`, `styles.css`, `script.js`, `notes-todo.txt` aus `output/project/starter/` (oder aus dem Fallback-Abschnitt der Übung) in den `teamsite`-Ordner kopieren.
+Die vier Dateien `index.html`, `styles.css`, `script.js`, `notes-todo.txt` aus `project/starter/` (oder aus dem Fallback-Abschnitt der Übung) in den `teamsite`-Ordner kopieren.
 
 ## Aufgabe 4: Stagen und Status prüfen
 

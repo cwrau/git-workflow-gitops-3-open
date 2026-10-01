@@ -2,13 +2,14 @@
 
 ## Aufgabe 1-4: Erweiterter Workflow
 
-`.github/workflows/lint.yml`:
+`.github/workflows/lint.yaml`:
 
 ```yaml
 name: Test und Lint
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -28,16 +29,16 @@ jobs:
           key: teamsite-cache-v1
       - name: HTML-Dateien auflisten
         run: find . -name "*.html" -print
-      - name: Pruefen, ob Startseite existiert
+      - name: Prüfen, ob Startseite existiert
         run: test -f index.html
-      - name: Pruefen, ob Titel im HTML vorkommt
+      - name: Prüfen, ob Titel im HTML vorkommt
         run: grep -q "<title>" index.html
-      - name: Service-Container erreichbar pruefen
+      - name: Service-Container erreichbar prüfen
         run: curl -sf http://localhost:8080/get
 ```
 
 ```bash
-git add .github/workflows/lint.yml
+git add .github/workflows/lint.yaml
 git commit -m "Workflow um Tests, Caching und Service-Container erweitern"
 git push
 ```
@@ -45,24 +46,6 @@ git push
 ## Aufgabe 5: Lauf prüfen
 
 Unter GitHub "Actions" zeigen alle fünf Steps einen grünen Haken; der Service-Container "httpbin" erscheint zusätzlich in der Lauf-Detailansicht als eigener, parallel laufender Container.
-
-## Aufgabe 6: Fehlschlag provozieren
-
-```bash
-# index.html: <title>...</title> temporaer entfernen
-git add index.html
-git commit -m "Test: title-Element temporaer entfernen"
-git push
-```
-
-Der Step "Pruefen, ob Titel im HTML vorkommt" schlägt fehl (roter Status), alle vorherigen Steps bleiben erfolgreich.
-
-```bash
-git revert HEAD
-git push
-```
-
-`git revert` macht die Test-Änderung rückgängig, ohne die Historie umzuschreiben; der nächste Lauf ist wieder vollständig erfolgreich.
 
 ## Erweiterung (Beispielantwort)
 

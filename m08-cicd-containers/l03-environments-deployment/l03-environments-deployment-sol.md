@@ -5,7 +5,7 @@
 ```yaml
 jobs:
   test:
-    # ... unveraendert aus Lab 8.2 ...
+    # ... unverändert aus Lab 8.2 ...
 
   deploy-staging:
     needs: test
@@ -15,12 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Simulierte Bereitstellung nach Staging
-        run: echo "Bereitstellung nach Staging simuliert fuer $(git rev-parse --short HEAD)"
+        run: echo "Bereitstellung nach Staging simuliert für $(git rev-parse --short HEAD)"
 ```
 
 ```bash
-git add .github/workflows/lint.yml
-git commit -m "Branchabhaengigen Staging-Job ergaenzen"
+git add .github/workflows/lint.yaml
+git commit -m "Branchabhängigen Staging-Job ergänzen"
 git push
 ```
 
@@ -35,15 +35,7 @@ git switch -c staging
 git push -u origin staging
 ```
 
-Der ausgelöste Lauf auf `staging` zeigt `test` erfolgreich und danach `deploy-staging` ebenfalls erfolgreich, mit der simulierten Bereitstellungsausgabe im Log.
-
-## Aufgabe 6: Vergleich
-
-```bash
-git log -1 --oneline
-```
-
-Der im Workflow-Log ausgegebene Commit-Hash (`git rev-parse --short HEAD` innerhalb des Runners) entspricht exakt dem lokal per `git log -1` ermittelten Hash desselben Commits - der Runner arbeitet auf einem Checkout genau dieses Standes.
+Der ausgelöste Lauf auf `staging` zeigt `test` erfolgreich und danach `deploy-staging` ebenfalls erfolgreich, mit der simulierten Bereitstellungsausgabe und dem Commit-Hash im Log.
 
 ## Erweiterung (Beispielantwort)
 

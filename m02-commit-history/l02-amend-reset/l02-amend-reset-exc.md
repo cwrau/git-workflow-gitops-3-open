@@ -1,6 +1,6 @@
 # Lab 2.2 - Übung: Fehler mit `commit --amend` und `reset` beheben
 
-Diese Übung arbeitet im Repository der Kodschul Team Site (Stand nach Modul 1: `output/project/checkpoints/after-m1/`).
+Diese Übung arbeitet im Repository der Kodschul Team Site (Stand nach Modul 1: `project/checkpoints/after-m1/`).
 
 ## Ausgangslage
 
@@ -31,4 +31,4 @@ Mit `git reset --mixed HEAD~1` (statt `--soft`) denselben letzten Commit versuch
 
 ## Fallback
 
-Ohne Zugriff auf den eigenen Verlauf aus Modul 1: mit `output/project/checkpoints/after-m1/` neu beginnen und dort ein frisches Repository mit einem einzigen Ausgangscommit anlegen, bevor Aufgabe 1 beginnt.
+Ohne Zugriff auf den eigenen Verlauf aus Modul 1: mit `project/checkpoints/after-m1/` neu beginnen und dort ein frisches Repository mit einem einzigen Ausgangscommit anlegen, bevor Aufgabe 1 beginnt.

@@ -7,11 +7,11 @@ Diese Manifeste bilden einen bewusst kleinen, repräsentativen Workload ab (nich
 | Datei | Zweck |
 | --- | --- |
 | `namespace.yaml` | eigener Namespace `teamsite-gitops` |
-| `configmap.yaml` | konfigurierbare Begrüßungsnachricht |
+| `kustomization.yaml` | listet die Manifeste auf und erzeugt per `configMapGenerator` die ConfigMap mit der konfigurierbaren Begrüßungsnachricht; jede Änderung ergibt einen neuen ConfigMap-Namen (Hash) und löst damit einen Pod-Neustart aus |
 | `deployment.yaml` | ein Pod mit dem Demo-Image `hashicorp/http-echo`, das die Begrüßungsnachricht ausliefert |
 | `service.yaml` | Erreichbarkeit des Pods innerhalb des lokalen Clusters |
 
-Die Argo-CD-`Application`-Definition liegt bewusst nicht in diesem Ordner, sondern in `output/project/gitops-bootstrap/argocd-application.yaml`: Dieser Ordner hier ist genau der Sync-Pfad, den Argo CD überwacht, und soll ausschließlich die tatsächlichen Workload-Manifeste enthalten.
+Die Argo-CD-`Application`-Definition liegt bewusst nicht in diesem Ordner, sondern in `project/gitops-bootstrap/argocd-application.yaml`: Dieser Ordner hier ist genau der Sync-Pfad, den Argo CD überwacht, und soll ausschließlich die tatsächlichen Workload-Manifeste enthalten.
 
 ## Verwendetes Image
 

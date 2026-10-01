@@ -8,12 +8,11 @@ Das `teamsite`-Repository, verbunden mit GitHub (Stand nach Modul 5/6), auf `mai
 
 ## Aufgaben
 
-1. Den Ordner `.github/workflows/` anlegen und darin `lint.yml` mit dem in der Theorie gezeigten Inhalt erstellen.
-2. `lint.yml` committen und nach `main` pushen.
+1. Den Ordner `.github/workflows/` anlegen und darin `lint.yaml` mit dem in der Theorie gezeigten Inhalt erstellen.
+2. `lint.yaml` committen und nach `main` pushen.
 3. Unter GitHub "Actions" bestätigen, dass der Workflow "Lint HTML" gelaufen ist und erfolgreich abgeschlossen wurde (grüner Haken).
 4. Unter GitHub "Settings -> Pages" die Veröffentlichung aus dem `main`-Branch (Wurzelverzeichnis) aktivieren.
 5. Nach einigen Minuten die zugewiesene GitHub-Pages-URL öffnen und bestätigen, dass die Startseite der Kodschul Team Site erreichbar ist.
-6. In der Workflow-Datei den Trigger so erweitern, dass der Workflow zusätzlich bei jedem Pull Request läuft, falls das nicht bereits der Fall ist, und die Änderung committen.
 
 ## Beobachtbarer Checkpoint
 
@@ -21,7 +20,7 @@ GitHub "Actions" zeigt einen erfolgreichen Lauf von "Lint HTML"; die GitHub-Page
 
 ## Abschlusskriterien
 
-- `.github/workflows/lint.yml` ist committet und löst bei Push auf `main` einen Workflow-Lauf aus.
+- `.github/workflows/lint.yaml` ist committet und löst bei Push auf `main` einen Workflow-Lauf aus.
 - Der Workflow-Lauf ist unter "Actions" als erfolgreich markiert.
 - Die veröffentlichte GitHub-Pages-Seite zeigt den aktuellen Inhalt von `index.html`.
 

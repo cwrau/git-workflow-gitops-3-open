@@ -86,7 +86,7 @@ Damit Cherry-Picking gezielt an einer bewusst vorbereiteten, verzweigten Histori
 
 ### Werden Git-Hooks automatisch mit anderen Personen geteilt?
 
-Nein. `.git/hooks/` liegt außerhalb der versionierten Historie; ein team-weit geteilter Hook benötigt ein zusätzliches Verteilungsverfahren, das im Kurs nicht behandelt wird (Modul 7).
+Nein. `.git/hooks/` liegt außerhalb der versionierten Historie; Hooks lassen sich nicht einfach team-weit verteilen. Verbindliche Prüfungen gehören deshalb in CI-Checks (ab Lab 7.3), die für alle Beteiligten laufen.
 
 ### Wie lange dauert es, bis GitHub Pages nach der Aktivierung erreichbar ist?
 
@@ -132,7 +132,7 @@ Die im Kurs erarbeiteten Konzepte (deklarative Infrastruktur, Push- vs. Pull-Ber
 
 ### Warum liegt die Argo-CD-`Application`-Definition in einem eigenen Ordner (`gitops-bootstrap/`) statt neben den übrigen Manifesten?
 
-Damit der von Argo CD überwachte Sync-Pfad (`output/project/gitops/`) ausschließlich die eigentlichen Workload-Manifeste enthält. Läge die `Application`-Definition im selben Ordner, würde Argo CD versuchen, auch ihre eigene Ressource als Teil des überwachten Zustands zu verwalten - die Bootstrap-Datei wird stattdessen einmalig manuell angewendet.
+Damit der von Argo CD überwachte Sync-Pfad (`project/gitops/`) ausschließlich die eigentlichen Workload-Manifeste enthält. Läge die `Application`-Definition im selben Ordner, würde Argo CD versuchen, auch ihre eigene Ressource als Teil des überwachten Zustands zu verwalten - die Bootstrap-Datei wird stattdessen einmalig manuell angewendet.
 
 ### Muss man Kubernetes bereits gut kennen, um Modul 9 zu bearbeiten?
 

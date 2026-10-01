@@ -7,9 +7,9 @@
 ```text
 # Kurzbeschreibung (max. 50 Zeichen)
 
-# Warum ist diese Aenderung noetig?
+# Warum ist diese Änderung nötig?
 
-# Wie wurde sie getestet/geprueft?
+# Wie wurde sie getestet/geprüft?
 ```
 
 ## Aufgabe 2: Aktivieren
@@ -21,13 +21,13 @@ git config commit.template .gitmessage.txt
 ## Aufgabe 3: Editorgestützter Commit (Beispielantwort)
 
 ```text
-Absatz zur naechsten Team-Veranstaltung ergaenzen
+Absatz zur nächsten Team-Veranstaltung ergänzen
 
 Teilnehmende sollen das Datum direkt auf der Startseite finden,
-ohne eine separate Ankuendigung suchen zu muessen.
+ohne eine separate Ankündigung suchen zu müssen.
 
-Manuell im Browser geprueft: Absatz erscheint unterhalb der
-bestehenden Ankuendigung, Layout bleibt unveraendert.
+Manuell im Browser geprüft: Absatz erscheint unterhalb der
+bestehenden Ankündigung, Layout bleibt unverändert.
 ```
 
 ## Aufgabe 4: `-m`-Commit
@@ -37,13 +37,7 @@ git add index.html
 git commit -m "Layout-Detail anpassen"
 ```
 
-## Aufgabe 5: Vergleich
-
-```bash
-git log -2
-```
-
-Der editorgestützte Commit aus Aufgabe 3 enthält drei klar getrennte Informationsblöcke (was, warum, wie geprüft); der `-m`-Commit aus Aufgabe 4 enthält ausschließlich eine kurze Zusammenfassung ohne Begründung oder Prüfnachweis - für eine spätere Nachvollziehbarkeit liefert die Vorlage deutlich mehr Kontext.
+Mit `-m` öffnet sich kein Editor, die Vorlage kommt nicht zum Einsatz: Die Nachricht enthält ausschließlich die kurze Zusammenfassung ohne Begründung oder Prüfnachweis.
 
 ## Erweiterung (Beispielantwort)
 

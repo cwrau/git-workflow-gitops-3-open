@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: <repository-url>
     targetRevision: main
-    path: output/project/gitops
+    path: project/gitops
   destination:
     server: https://kubernetes.default.svc
     namespace: teamsite-gitops

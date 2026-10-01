@@ -17,7 +17,7 @@ Aus Trigger (`on:`), einem oder mehreren Jobs, und je Job einer Abfolge von Step
 </details>
 
 <details>
-<summary>Wie erfährt GitHub Actions, wann ein Workflow laufen soll?</summary>
+<summary>Wo wird festgelegt, bei welchen Ereignissen ein Workflow startet?</summary>
 
 Über den `on:`-Abschnitt, z. B. bei jedem Push auf einen bestimmten Branch oder bei jedem Pull Request.
 
@@ -46,7 +46,8 @@ Das direkte Veröffentlichen der statischen HTML/CSS/JS-Dateien des Repositorys 
 name: Lint HTML
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -60,7 +61,7 @@ jobs:
 
 ## Ablauf für dieses Lab
 
-1. Ordner `.github/workflows/` anlegen, darin `lint.yml` mit obigem Inhalt.
+1. Ordner `.github/workflows/` anlegen, darin `lint.yaml` mit obigem Inhalt.
 2. Commit und Push nach `main` (oder über einen Pull Request).
 3. Unter GitHub "Actions" den Workflow-Lauf beobachten.
 4. Unter GitHub "Settings -> Pages" die Veröffentlichung aus dem `main`-Branch aktivieren.

@@ -23,14 +23,7 @@ docker ps -a
 # <id>           alpine:3.22    "echo 'Hallo ...'"    Exited (0) ...
 ```
 
-## Aufgabe 6: Zuordnungstabelle
-
-| Befehl | Beobachtete Ausgabe (zusammengefasst) | Zugeordneter Begriff |
-| --- | --- | --- |
-| `docker pull alpine:3.22` | lädt Layer aus einer entfernten Quelle herunter | Registry |
-| `docker images` | listet `alpine` mit ID und Größe als lokale Vorlage | Image |
-| `docker run alpine:3.22 echo ...` | gibt den Text einmalig aus, dann endet der Prozess | Container (während der Ausführung) |
-| `docker ps -a` | zeigt den beendeten Lauf mit Status "Exited" | Container (nach der Ausführung) |
+Zuordnung: `docker pull` lädt aus der Registry, `docker images` listet das Image (die lokale Vorlage), `docker run` startet daraus einen Container, `docker ps -a` zeigt den beendeten Container mit Status "Exited".
 
 ## Erweiterung (Beispielantwort)
 

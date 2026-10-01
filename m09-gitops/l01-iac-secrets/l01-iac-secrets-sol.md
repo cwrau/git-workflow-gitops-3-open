@@ -20,10 +20,6 @@
 
 Siehe Tabellenspalte "Begründung" oben - jede Zeile bezieht sich auf ein konkretes, beobachtbares Merkmal (Zielzustand vs. Schrittfolge; dauerhafte Historie vs. getrenntes Objekt), nicht auf einen allgemeinen Eindruck.
 
-## Aufgabe 4: Abgleich mit den Kursmanifesten
-
-`output/project/gitops/configmap.yaml` enthält ausschließlich den Wert `GREETING_MESSAGE` mit einem harmlosen Begrüßungstext - kein Zugangsdatum, kein Schlüssel, kein Token. `output/project/gitops/deployment.yaml` referenziert diesen Wert lediglich über `configMapKeyRef`, ohne selbst sensible Daten zu enthalten. Beide Dateien sind damit unbedenklich für ein öffentliches Repository.
-
 ## Erweiterung (Beispielantwort)
 
 Beispiel: "Eine Konfigurationsdatei legt fest, dass ein Datenbank-Cluster aus fünf Knoten besteht, unabhängig davon, wie viele davon aktuell laufen." Einordnung: deklarativ, da der Zielzustand (fünf Knoten) beschrieben wird und ein Kontrollmechanismus selbstständig für die Angleichung sorgt - genau dieses Prinzip liegt auch der GitOps-Bereitstellung in Lab 9.2/9.3 zugrunde.

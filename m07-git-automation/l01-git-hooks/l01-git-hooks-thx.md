@@ -49,7 +49,7 @@ Git bricht den Commit-Vorgang ab, bevor ein neuer Commit entsteht - die Änderun
 ## Ablauf für dieses Lab
 
 ```bash
-# .git/hooks/pre-commit anlegen (ausfuehrbar)
+# .git/hooks/pre-commit anlegen (ausführbar)
 #!/bin/sh
 if grep -r "console.log" --include="*.js" .; then
   echo "Commit abgelehnt: console.log gefunden."
@@ -63,14 +63,14 @@ chmod +x .git/hooks/pre-commit
 ```
 
 - Ein Hook, der versehentlich mit Exit-Code `0` endet, obwohl ein Problem gefunden wurde, verhindert nichts - der Rückgabewert entscheidet, nicht die reine Textausgabe.
-- Da `.git/hooks/` nicht versioniert wird, benötigt ein team-weit geteilter Hook ein zusätzliches Verteilungsverfahren (z. B. ein Setup-Skript, das den Hook bei der Einrichtung kopiert) - das ist ein bekannter Grenzfall lokaler Hooks, kein Fehler in diesem Lab.
+- Da `.git/hooks/` nicht versioniert wird, lassen sich Hooks nicht einfach team-weit verteilen (nur mit Zusatzmitteln wie einem Setup-Skript, das den Hook bei der Einrichtung kopiert). Verbindliche Prüfungen gehören deshalb in CI-Checks (Lab 7.3), die für alle Beteiligten laufen; Hooks sind eine lokale Komfortfunktion.
 
-> **Merksatz:** Ein Hook schützt nur das eigene lokale Repository - ohne Verteilung schützt er nicht automatisch auch andere Beteiligte.
+> **Merksatz:** Hooks lassen sich nicht einfach verteilen - verbindliche Prüfungen gehören in CI-Checks, die für alle Beteiligten laufen.
 
 ## Fazit
 
 - Git-Hooks automatisieren wiederkehrende Prüfungen direkt im lokalen Arbeitsablauf.
 - Der Exit-Code des Hook-Skripts entscheidet über Erfolg oder Abbruch des Commits.
-- Hooks liegen standardmäßig außerhalb der versionierten Historie und werden nicht automatisch geteilt.
+- Hooks liegen standardmäßig außerhalb der versionierten Historie und werden nicht automatisch geteilt; verbindlich sind CI-Checks (ab Lab 7.3).
 
 Die Übung richtet einen `pre-commit`-Hook ein, der Debug-Rückstände abfängt, bevor sie committet werden.

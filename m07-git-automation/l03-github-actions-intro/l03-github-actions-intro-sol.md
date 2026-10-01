@@ -2,13 +2,14 @@
 
 ## Aufgabe 1-2: Workflow-Datei anlegen
 
-`.github/workflows/lint.yml`:
+`.github/workflows/lint.yaml`:
 
 ```yaml
 name: Lint HTML
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -21,7 +22,7 @@ jobs:
 ```
 
 ```bash
-git add .github/workflows/lint.yml
+git add .github/workflows/lint.yaml
 git commit -m "Ersten Lint-Workflow anlegen"
 git push
 ```
@@ -33,10 +34,6 @@ Unter GitHub "Actions" erscheint ein Lauf "Lint HTML" mit grünem Haken; die Aus
 ## Aufgabe 4-5: GitHub Pages aktivieren
 
 Unter "Settings -> Pages": Quelle auf Branch `main`, Ordner `/ (root)` setzen. Nach wenigen Minuten ist die Seite unter der von GitHub angezeigten URL (Format `https://<konto>.github.io/teamsite/`) erreichbar und zeigt den aktuellen Inhalt von `index.html`.
-
-## Aufgabe 6: Trigger bereits vorhanden
-
-Der `on:`-Abschnitt aus Aufgabe 1 enthält bereits `pull_request:` ohne weitere Einschränkung - der Workflow läuft damit sowohl bei Push auf `main` als auch bei jedem Pull Request unabhängig vom Zielbranch. Keine weitere Änderung nötig; falls dennoch eine Anpassung gewünscht ist, ergänzt `pull_request: { branches: [main] }` eine explizite Einschränkung auf Pull Requests gegen `main`.
 
 ## Erweiterung (Beispielantwort)
 

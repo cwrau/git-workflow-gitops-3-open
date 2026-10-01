@@ -42,9 +42,9 @@ Der aktuell laufende Zustand entspricht exakt dem zuletzt committeten Manifest-I
 ## Ablauf für dieses Lab
 
 ```bash
-# configmap.yaml: GREETING_MESSAGE anpassen
-git add output/project/gitops/configmap.yaml
-git commit -m "Begruessungstext fuer die GitOps-Demo aktualisieren"
+# kustomization.yaml: GREETING_MESSAGE anpassen
+git add project/gitops/kustomization.yaml
+git commit -m "Begrüßungstext für die GitOps-Demo aktualisieren"
 git push
 
 kubectl get applications -n argocd -w
@@ -54,7 +54,7 @@ kubectl port-forward svc/site-greeter -n teamsite-gitops 8080:80
 curl localhost:8080
 ```
 
-- Eine ConfigMap-Änderung führt bei diesem Deployment zu einem neuen Pod (der alte Pod wird ersetzt), da sich der referenzierte Wert über eine Umgebungsvariable ändert.
+- Eine geänderte ConfigMap startet laufende Pods nicht neu, Umgebungsvariablen werden nur beim Containerstart gelesen. Hier erzeugt der `configMapGenerator` in `kustomization.yaml` deshalb bei jeder Änderung eine ConfigMap mit neuem Hash-Suffix im Namen. Das Deployment verweist dann auf einen neuen Namen, die Pod-Spezifikation ändert sich und Kubernetes ersetzt den alten Pod.
 - Je nach konfiguriertem Synchronisationsintervall kann zwischen Push und sichtbarer Änderung im Cluster eine kurze Wartezeit liegen.
 
 > **Merksatz:** Der End-to-End-Nachweis ist erst vollständig, wenn die beobachtbare Auswirkung im Cluster tatsächlich mit dem Git-Commit übereinstimmt - eine Vermutung reicht nicht.

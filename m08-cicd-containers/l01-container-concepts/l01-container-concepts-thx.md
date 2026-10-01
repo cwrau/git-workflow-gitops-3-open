@@ -12,7 +12,7 @@ Grundlegende Docker-Befehle ausführen und die beobachtete Ausgabe den passenden
 <details>
 <summary>Was ist der Unterschied zwischen einem Image und einem Container?</summary>
 
-Ein Image ist eine unveränderliche Vorlage (Dateisystem plus Startbefehl); ein Container ist eine laufende (oder beendete) Instanz eines Images.
+Ein Image ist eine unveränderliche Vorlage (Dateisystem plus Startkonfiguration: Startbefehl, Umgebungsvariablen); ein Container ist eine laufende (oder beendete) Instanz eines Images.
 
 </details>
 
@@ -34,7 +34,7 @@ Von Docker Hub, der Standard-Registry, sofern keine andere Registry explizit ang
 
 | Begriff | Bedeutung |
 | --- | --- |
-| Image | unveränderliche Vorlage für einen Container (Dateisystem + Startbefehl) |
+| Image | unveränderliche Vorlage für einen Container (Dateisystem + Startkonfiguration: Startbefehl, Umgebungsvariablen) |
 | Container | laufende oder beendete Instanz eines Images |
 | Registry | Speicherort für Images (Standard: Docker Hub) |
 | Orchestrierung | automatisiertes Verwalten mehrerer Container über Regeln statt Einzelbefehle (Kubernetes, Thema Modul 9) |

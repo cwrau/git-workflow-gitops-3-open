@@ -49,7 +49,7 @@ Weil ein produktionsnaher Schritt (z. B. eine simulierte Bereitstellung) nicht v
     steps:
       - uses: actions/checkout@v4
       - name: Simulierte Bereitstellung nach Staging
-        run: echo "Bereitstellung nach Staging simuliert fuer $(git rev-parse --short HEAD)"
+        run: echo "Bereitstellung nach Staging simuliert für $(git rev-parse --short HEAD)"
 ```
 
 - `needs: test` sorgt dafür, dass der neue Job erst nach erfolgreichem Abschluss des bestehenden Test-Jobs startet.

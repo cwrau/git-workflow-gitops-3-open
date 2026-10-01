@@ -4,13 +4,13 @@ Diese Übung legt das gemeinsame Referenzprojekt, die Kodschul Team Site, lokal 
 
 ## Ausgangslage
 
-Ein leerer, neuer lokaler Ordner sowie Zugriff auf die Startdateien unter `output/project/starter/` (`index.html`, `styles.css`, `script.js`, `notes-todo.txt`). Falls der Ordnerzugriff nicht möglich ist, stehen die vier Dateien vollständig weiter unten in diesem Dokument.
+Ein leerer, neuer lokaler Ordner sowie Zugriff auf die Startdateien unter `project/starter/` (`index.html`, `styles.css`, `script.js`, `notes-todo.txt`). Falls der Ordnerzugriff nicht möglich ist, stehen die vier Dateien vollständig weiter unten in diesem Dokument.
 
 ## Aufgaben
 
 1. Git-Autor konfigurieren (`git config --global user.name`/`user.email`, oder lokal für dieses Repository).
 2. Einen neuen lokalen Ordner `teamsite` anlegen und darin `git init` ausführen.
-3. Die vier Startdateien (`index.html`, `styles.css`, `script.js`, `notes-todo.txt`) aus `output/project/starter/` in den Ordner kopieren.
+3. Die vier Startdateien (`index.html`, `styles.css`, `script.js`, `notes-todo.txt`) aus `project/starter/` in den Ordner kopieren.
 4. Alle Dateien mit `git add` stagen und den Status mit `git status` prüfen.
 5. Einen Commit mit einer klaren, kurzen Nachricht erstellen (z. B. "Erste Version der Kodschul Team Site").
 6. Mit `git log` und `git log --stat` das Ergebnis prüfen.

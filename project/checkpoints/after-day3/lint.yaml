@@ -1,7 +1,8 @@
 name: Test und Lint
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -21,11 +22,11 @@ jobs:
           key: teamsite-cache-${{ hashFiles('index.html') }}
       - name: HTML-Dateien auflisten
         run: find . -name "*.html" -print
-      - name: Pruefen, ob Startseite existiert
+      - name: Prüfen, ob Startseite existiert
         run: test -f index.html
-      - name: Pruefen, ob Titel im HTML vorkommt
+      - name: Prüfen, ob Titel im HTML vorkommt
         run: grep -q "<title>" index.html
-      - name: Service-Container erreichbar pruefen
+      - name: Service-Container erreichbar prüfen
         run: curl -sf http://localhost:8080/get
 
   deploy-staging:
@@ -36,4 +37,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Simulierte Bereitstellung nach Staging
-        run: echo "Bereitstellung nach Staging simuliert fuer $(git rev-parse --short HEAD)"
+        run: echo "Bereitstellung nach Staging simuliert für $(git rev-parse --short HEAD)"
