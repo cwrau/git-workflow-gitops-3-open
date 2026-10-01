@@ -3,7 +3,7 @@
 | Term / Abkürzung | Plattform / Bereich | Wann verwendet | Primäre Nutzer:innen | Vorkommen |
 | --- | --- | --- | --- | --- |
 | `~/.gitconfig` | Git-Konfiguration | globale Benutzereinstellungen (Aliase, Identität) | alle Teilnehmenden | Modul 1, 3 |
-| Argo CD | GitOps-Werkzeug | Pull-basierte, automatisierte Bereitstellung aus Git | alle Teilnehmenden | Modul 9 |
+| Argo CD | GitOps-Werkzeug | Pull-basierte, automatisierte Bereitstellung aus Git (Beispiel im Kurs; Alternative: Flux) | alle Teilnehmenden | Modul 9 |
 | Arbeitsverzeichnis | Git-Grundmodell | aktuelle Dateien auf der Festplatte | alle Teilnehmenden | Modul 1 |
 | Atomarer Commit | Commit-Praxis | ein Commit enthält genau eine logische Änderung | alle Teilnehmenden | Modul 1, 4 |
 | Audit-Trail | Change Management | Nachvollziehbarkeit von Wer/Wann/Was | alle Teilnehmenden | Modul 1 |

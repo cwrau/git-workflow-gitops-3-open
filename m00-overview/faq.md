@@ -128,7 +128,7 @@ Die grundlegenden Konzepte (Application-Objekt, automatisierte Synchronisation, 
 
 ### Was, wenn nach dem Kurs kein eigener Kubernetes-Cluster mehr zur Verfügung steht?
 
-Die im Kurs erarbeiteten Konzepte (deklarative Infrastruktur, Push- vs. Pull-Bereitstellung, Self-Healing) gelten unabhängig vom konkreten Werkzeug; Argo CD ist ein Beispiel für ein verbreitetes, aber nicht das einzige Pull-basierte GitOps-Werkzeug.
+Die im Kurs erarbeiteten Konzepte (deklarative Infrastruktur, Push- vs. Pull-Bereitstellung, Self-Healing) gelten unabhängig vom konkreten Werkzeug; Argo CD ist ein Beispiel für ein verbreitetes, aber nicht das einzige Pull-basierte GitOps-Werkzeug (Flux ist eine ebenso verbreitete Alternative).
 
 ### Warum liegt die Argo-CD-`Application`-Definition in einem eigenen Ordner (`gitops-bootstrap/`) statt neben den übrigen Manifesten?
 

@@ -37,7 +37,7 @@ Weicht der tatsächliche Zustand vom im Git-Repository beschriebenen Zustand ab 
 | Push-basierte Bereitstellung | eine Pipeline verbindet sich aktiv zum Zielsystem und überträgt die Änderung |
 | Pull-basierte Bereitstellung | ein Kontrollmechanismus im Zielsystem beobachtet ein Git-Repository und gleicht ab |
 | GitOps | Ansatz, bei dem ein Git-Repository die einzige verbindliche Quelle für den gewünschten Zielzustand ist |
-| Argo CD | verbreitetes, Pull-basiertes GitOps-Werkzeug für Kubernetes |
+| Argo CD und Flux | verbreitete, Pull-basierte GitOps-Werkzeuge für Kubernetes; im Kurs dient Argo CD als Beispiel |
 | Self-Healing | automatisches Zurücksetzen von Abweichungen auf den in Git beschriebenen Zustand |
 
 ## Push vs. Pull im Vergleich
