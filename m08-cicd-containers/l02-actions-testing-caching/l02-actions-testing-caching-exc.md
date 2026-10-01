@@ -20,7 +20,7 @@ GitHub "Actions" zeigt einen vollständig erfolgreichen Lauf mit allen fünf Ste
 
 ## Abschlusskriterien
 
-- Der Job heißt `test`; mindestens ein Test-Step (`grep`) prüft tatsächlichen Inhalt, nicht nur Dateiexistenz.
+- Der Job heißt `test` und enthält die beiden Test-Steps.
 - Der Service-Container ist über den definierten Port erreichbar (Step 4 erfolgreich).
 
 ## Erweiterung (optional)

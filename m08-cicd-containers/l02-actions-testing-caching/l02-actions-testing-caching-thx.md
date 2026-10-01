@@ -24,9 +24,9 @@ Ein zusätzlicher, parallel zum Job laufender Container (z. B. eine Datenbank), 
 </details>
 
 <details>
-<summary>Warum lohnt sich ein echter Test-Step gegenüber dem reinen `find`-Befehl aus Modul 7?</summary>
+<summary>Wann gilt ein Step als bestanden, wann als fehlgeschlagen?</summary>
 
-Ein echter Test prüft tatsächliches Verhalten (z. B. Vorhandensein bestimmter Inhalte) statt nur die Existenz von Dateien aufzulisten.
+Ein Step besteht, wenn sein Befehl mit Exit-Code `0` endet (wie beim Hook in Lab 7.1); jeder andere Exit-Code lässt den Step und damit den Lauf fehlschlagen.
 
 </details>
 
@@ -78,7 +78,7 @@ jobs:
 
 ## Fazit
 
-- Echte Test-Steps prüfen Inhalt und Verhalten, nicht nur Dateiexistenz.
+- Ein Step besteht, wenn sein Befehl mit Exit-Code `0` endet, sonst schlägt der Lauf fehl.
 - Caching spart wiederkehrende Ladezeit über mehrere Workflow-Läufe hinweg.
 - Service-Container stellen zusätzliche Dienste bereit, ohne den eigentlichen Job-Container zu verändern.
 
