@@ -47,6 +47,18 @@ curl localhost:8080
 
 Erwartete Ausgabe: der in Aufgabe 1 gewählte neue Text.
 
+## Aufgabe 6: Nachweis-Protokoll (Beispiel)
+
+```text
+Commit: a1b2c3d "Begrüßungstext für die GitOps-Demo aktualisieren"
+Synchronisiert: Argo CD zeigte "Synced" ca. 1 Minute nach dem Push
+Beobachteter Text (curl): "Kodschul Git-Workflow und GitOps - Kurs abgeschlossen am <Kursdatum>"
+```
+
+## Aufgabe 7: Rückschau (Beispielantwort)
+
+Modul 1-3 lieferten die Grundlage, überhaupt nachvollziehbare, saubere Commits zu erzeugen - ohne diese Basis wäre der finale Commit in Aufgabe 2 nicht anders als jede andere Änderung gewesen. Modul 4-6 ermöglichten es, diese Änderung im Team über Branches, Pull Requests und eine dokumentierte Strategie kontrolliert einzubringen, statt direkt und unkontrolliert auf `main` zu arbeiten. Modul 7-8 bauten die Automatisierung (Hooks, GitHub Actions) auf, die Qualität vor dem Merge sichert. Modul 9 schließlich verband denselben Mechanismus (ein Git-Commit als auslösendes Ereignis) mit einer tatsächlichen, automatisierten Bereitstellung - der gesamte Kurs mündet damit in genau diesem einen, durchgängig nachvollziehbaren Rollout.
+
 ## Erweiterung (Beispielantwort)
 
 Eine zweite, eigenständig wiederholte Änderung (ohne erneutes Nachlesen) bestätigt, dass der Ablauf verinnerlicht wurde: Manifest ändern, committen, pushen, Synchronisationsstatus beobachten, Ergebnis über `curl` verifizieren - exakt dieselben fünf Schritte wie beim ersten Durchlauf.
