@@ -8,7 +8,7 @@ Das `teamsite`-Repository, sauberes Arbeitsverzeichnis, auf `main`.
 
 ## Aufgaben
 
-1. Eine ausführbare Datei `.git/hooks/pre-commit` anlegen, die alle `.js`-Dateien im Repository nach dem Text `console.log` durchsucht und den Commit mit Exit-Code `1` ablehnt, falls ein Treffer gefunden wird; ohne Treffer soll der Hook mit Exit-Code `0` enden.
+1. Eine ausführbare Datei `.git/hooks/pre-commit` anlegen, die alle `.js`-Dateien im Repository nach dem Text `console.log` durchsucht und den Commit mit Exit-Code `1` ablehnt, falls ein Treffer gefunden wird; ohne Treffer soll der Hook mit Exit-Code `0` enden. Vorlage zum Kopieren: `~/handout/project/setup/snippets/pre-commit`.
 2. Den Hook mit `chmod +x .git/hooks/pre-commit` ausführbar machen.
 3. In `app.js` testweise eine `console.log`-Zeile ergänzen und versuchen, sie zu committen; den abgelehnten Commit dokumentieren (Ausgabe des Hooks notieren).
 4. Die `console.log`-Zeile wieder entfernen und erneut versuchen zu committen; den erfolgreichen Commit bestätigen.

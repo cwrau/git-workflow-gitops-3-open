@@ -8,7 +8,7 @@ Das `teamsite`-Repository, verbunden mit GitHub (Stand nach Modul 5/6), auf `mai
 
 ## Aufgaben
 
-1. Den Ordner `.github/workflows/` anlegen und darin `lint.yaml` mit dem in der Theorie gezeigten Inhalt erstellen.
+1. Den Ordner `.github/workflows/` anlegen und darin `lint.yaml` mit dem in der Theorie gezeigten Inhalt erstellen. Vorlage zum Kopieren: `~/handout/project/setup/snippets/lint-7.3.yaml`.
 2. `lint.yaml` committen und nach `main` pushen.
 3. Unter GitHub "Actions" bestätigen, dass der Workflow "Lint HTML" gelaufen ist und erfolgreich abgeschlossen wurde (grüner Haken).
 4. Unter GitHub "Settings -> Pages" die Veröffentlichung aus dem `main`-Branch (Wurzelverzeichnis) aktivieren.

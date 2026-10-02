@@ -8,7 +8,7 @@ Das `teamsite`-Repository mit dem bestehenden Workflow `.github/workflows/lint.y
 
 ## Aufgaben
 
-1. Den Job `lint` in `test` umbenennen (Lab 8.3 verweist per `needs: test` darauf) und den bestehenden Workflow um zwei Test-Steps erweitern: Prüfung, dass `index.html` existiert (`test -f index.html`), und Prüfung, dass die Datei ein `<title>`-Element enthält (`grep -q "<title>" index.html`).
+1. Den Job `lint` in `test` umbenennen (Lab 8.3 verweist per `needs: test` darauf) und den bestehenden Workflow um zwei Test-Steps erweitern: Prüfung, dass `index.html` existiert (`test -f index.html`), und Prüfung, dass die Datei ein `<title>`-Element enthält (`grep -q "<title>" index.html`). Stand zum Kopieren: `~/handout/project/setup/snippets/lint-8.2.yaml`.
 2. Einen Caching-Step mit `actions/cache@v4` für ein beliebiges Verzeichnis (z. B. `.cache`) mit einem festen Key ergänzen.
 3. Einen Service-Container `httpbin` (Image `mccutchen/go-httpbin:2.25.0`, Port 8080) im Job ergänzen.
 4. Einen weiteren Step ergänzen, der mit `curl -sf http://localhost:8080/get` die Erreichbarkeit des Service-Containers prüft.

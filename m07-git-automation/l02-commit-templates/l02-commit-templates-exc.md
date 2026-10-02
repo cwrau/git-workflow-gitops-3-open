@@ -8,7 +8,7 @@ Das `teamsite`-Repository im Stand nach Lab 7.1, sauberes Arbeitsverzeichnis.
 
 ## Aufgaben
 
-1. Eine Datei `.gitmessage.txt` im Repository-Wurzelverzeichnis mit einer dreiteiligen Vorlage anlegen (Kurzbeschreibung, Grund, Testnachweis - siehe Beispiel in der Theorie).
+1. Eine Datei `.gitmessage.txt` im Repository-Wurzelverzeichnis mit einer dreiteiligen Vorlage anlegen (Kurzbeschreibung, Grund, Testnachweis - siehe Beispiel in der Theorie). Vorlage zum Kopieren: `~/handout/project/setup/snippets/gitmessage.txt`.
 2. Die Vorlage lokal für dieses Repository mit `git config commit.template .gitmessage.txt` aktivieren.
 3. Eine kleine Änderung vornehmen (z. B. einen weiteren Absatz in `index.html` ergänzen) und mit `git commit` (ohne `-m`) einen Commit über den Editor erstellen, dabei alle drei Vorlagenabschnitte ausfüllen.
 4. Eine zweite kleine Änderung vornehmen und stattdessen mit `git commit -m "..."` committen; beobachten, dass der Editor nicht öffnet und die Vorlage nicht verwendet wird.

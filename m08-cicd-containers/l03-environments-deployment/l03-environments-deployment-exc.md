@@ -9,7 +9,7 @@ Das `teamsite`-Repository mit dem erweiterten Workflow aus Lab 8.2, auf `main`.
 ## Aufgaben
 
 1. Unter GitHub "Settings -> Environments" eine Umgebung `staging` anlegen.
-2. Im Workflow einen zweiten Job `deploy-staging` ergänzen, der von `test` abhängt (`needs: test`), nur auf dem Branch `staging` läuft und die Umgebung `staging` verwendet.
+2. Im Workflow einen zweiten Job `deploy-staging` ergänzen, der von `test` abhängt (`needs: test`), nur auf dem Branch `staging` läuft und die Umgebung `staging` verwendet. Stand zum Kopieren: `~/handout/project/setup/snippets/lint-8.3.yaml`.
 3. Im neuen Job einen Step ergänzen, der eine simulierte Bereitstellung ausgibt (z. B. den aktuellen Commit-Hash in einer Textausgabe).
 4. Die Änderung committen und nach `main` pushen; unter "Actions" bestätigen, dass `deploy-staging` als "skipped" markiert ist, da `main` nicht `staging` ist.
 5. Einen neuen Branch `staging` anlegen, den aktuellen Stand von `main` dorthin pushen, und unter "Actions" bestätigen, dass `deploy-staging` diesmal tatsächlich ausgeführt wird.
