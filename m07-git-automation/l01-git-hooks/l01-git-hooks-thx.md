@@ -72,5 +72,6 @@ chmod +x .git/hooks/pre-commit
 - Git-Hooks automatisieren wiederkehrende Prüfungen direkt im lokalen Arbeitsablauf.
 - Der Exit-Code des Hook-Skripts entscheidet über Erfolg oder Abbruch des Commits.
 - Hooks liegen standardmäßig außerhalb der versionierten Historie und werden nicht automatisch geteilt; verbindlich sind CI-Checks (ab Lab 7.3).
+- Das Framework [pre-commit](https://pre-commit.com/) verwaltet Hooks in einer versionierten Datei `.pre-commit-config.yaml`, installiert sie mit `pre-commit install` und kann dieselben Prüfungen mit `pre-commit run --all-files` in der CI ausführen.
 
 Die Übung richtet einen `pre-commit`-Hook ein, der Debug-Rückstände abfängt, bevor sie committet werden.
