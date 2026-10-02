@@ -49,7 +49,7 @@ Git bricht den Commit-Vorgang ab, bevor ein neuer Commit entsteht - die Änderun
 ## Ablauf für dieses Lab
 
 ```bash
-# .git/hooks/pre-commit anlegen (ausführbar)
+# .git/hooks/pre-commit anlegen und mit chmod +x ausführbar machen
 #!/bin/sh
 if grep -r "console.log" --include="*.js" .; then
   echo "Commit abgelehnt: console.log gefunden."
