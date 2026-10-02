@@ -8,7 +8,7 @@ Das Repository `teamsite` auf GitHub, `main` ist gepusht, das Arbeitsverzeichnis
 
 ## Aufgaben
 
-1. Die Vorbereitung ausführen: `bash ~/handout/project/setup/snippets/rebase-vorbereiten.sh`. Sie legt den Branch `feature/notizen` mit drei Commits an, gibt `main` einen weiteren Commit und pusht beides.
+1. Mit `cd ~/teamsite` in das Repository wechseln und die Vorbereitung ausführen: `bash ~/handout/project/setup/snippets/rebase-vorbereiten.sh`. Sie legt den Branch `feature/notizen` mit drei Commits an, gibt `main` einen weiteren Commit und pusht beides.
 2. Mit `git log --oneline --graph --all` ansehen, dass `feature/notizen` auf dem alten Stand von `main` aufbaut.
 3. Auf `feature/notizen` den Branch mit `git rebase main` auf den aktuellen `main` aufsetzen und den Graphen erneut ansehen.
 4. Mit `git rebase -i HEAD~3` die beiden "wip"-Commits in den ersten Commit einfügen: in der Liste bei den Zeilen 2 und 3 `pick` durch `fixup` ersetzen, speichern, schließen.

@@ -34,3 +34,5 @@ git push
 git switch feature/notizen
 echo
 git log --oneline --graph --all
+echo
+echo "Weiter in ~/teamsite (Branch feature/notizen)."

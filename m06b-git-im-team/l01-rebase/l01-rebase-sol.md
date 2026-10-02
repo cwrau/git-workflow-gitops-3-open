@@ -3,6 +3,7 @@
 ## Aufgabe 1-2: Vorbereitung und Ausgangslage
 
 ```bash
+cd ~/teamsite
 bash ~/handout/project/setup/snippets/rebase-vorbereiten.sh
 git log --oneline --graph --all
 ```

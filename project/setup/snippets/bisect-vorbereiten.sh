@@ -29,3 +29,5 @@ done
 
 echo "Fertig: $dir"
 git log --oneline | head -5
+echo
+echo "Weiter mit: cd ~/bisect-demo"
