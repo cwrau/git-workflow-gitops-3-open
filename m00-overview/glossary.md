@@ -99,3 +99,13 @@
 | Versionskontrolle | Grundprinzip | System zur Nachvollziehbarkeit von Dateiänderungen über Zeit | alle Teilnehmenden | Modul 1 |
 | Workflow-Datei | GitHub Actions | YAML-Datei unter `.github/workflows/` | alle Teilnehmenden | Modul 7, 8 |
 | YAML | Konfigurationsformat | Format für Workflow-Dateien und Kubernetes-Manifeste | alle Teilnehmenden | Modul 7-9 |
+| `git rebase` | Git | Commits auf eine neue Basis aufsetzen, lineare Historie | alle Teilnehmenden | Modul 6b |
+| `--force-with-lease` | Git | Push nach Rebase, überschreibt nur, wenn dort nichts Neues liegt | alle Teilnehmenden | Modul 6b |
+| `git restore` | Git | Änderungen im Arbeitsverzeichnis oder Staging verwerfen | alle Teilnehmenden | Modul 6b |
+| `git revert` | Git | geteilten Commit durch einen neuen Commit zurücknehmen | alle Teilnehmenden | Modul 6b |
+| `git reflog` | Git | verlorene lokale Stände wiederfinden | alle Teilnehmenden | Modul 6b |
+| `git bisect` | Git | binäre Suche nach dem Commit, der einen Fehler eingeführt hat | alle Teilnehmenden | Modul 6b |
+| Branch-Schutz / Ruleset | GitHub | Regeln für einen Branch (Pull Request, Reviews, Pflicht-Checks) | alle Teilnehmenden | Modul 6b |
+| `CODEOWNERS` | GitHub | Dateien Verantwortlichen zuordnen | alle Teilnehmenden | Modul 6b |
+| Conventional Commits | Commit-Praxis | Schema `<typ>: <beschreibung>` (`feat:`, `fix:`, ...) | alle Teilnehmenden | Modul 6b |
+| Semver | Versionierung | Versionsschema MAJOR.MINOR.PATCH | alle Teilnehmenden | Modul 6b |

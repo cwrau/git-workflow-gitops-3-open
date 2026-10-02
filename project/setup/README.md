@@ -104,3 +104,12 @@ cp ~/handout/project/setup/snippets/lint-8.3.yaml .github/workflows/lint.yaml
 ```
 
 Die Dateien haben LF-Zeilenenden (`.gitattributes`), damit der Hook unter Windows läuft.
+
+Lab 6b.1 und 6b.2, Vorbereitung der Übungen:
+
+```bash
+bash ~/handout/project/setup/snippets/rebase-vorbereiten.sh
+bash ~/handout/project/setup/snippets/bisect-vorbereiten.sh
+```
+
+`rebase-vorbereiten.sh` läuft in `~/teamsite` und legt den Branch `feature/notizen` an, `bisect-vorbereiten.sh` erzeugt das Repository `~/bisect-demo`.

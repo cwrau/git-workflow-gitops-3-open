@@ -41,6 +41,7 @@ Sichtbarer Abschluss (Modul 9, Lab 9.3): ein selbst durchgeführter End-to-End-R
 
 | Zeit | Modul | Inhalt |
 | --- | --- | --- |
+| ca. 65 Min | Modul 6b: Git im Team vertiefen | Rebase und `--force-with-lease`, `restore`/`revert`/`reflog`, `bisect`/`blame`, Branch-Schutz, `CODEOWNERS`, Conventional Commits, Versions-Tags |
 | 09:00-11:20 | Modul 7: Git-Automatisierung mit Hooks und Actions | Git-Hooks, Commit-Vorlage, erster GitHub-Actions-Workflow, GitHub Pages |
 | 11:20-14:10 | Modul 8: Container-Grundlagen und CI/CD mit GitHub Actions | Docker-Grundbegriffe, Tests/Caching/Service-Container, branchabhängige Umgebungen |
 | 14:10-16:30 | Modul 9: Infrastruktur als Code und GitOps in der Praxis | Deklarative Infrastruktur, Argo CD, Push- vs. Pull-Bereitstellung, End-to-End-Rollout |

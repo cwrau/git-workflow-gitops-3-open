@@ -24,6 +24,10 @@
   - Pull Request erstellen und Review bearbeiten
   - Cherry-Picking und Squashing an einer präparierten Historie
   - Branch-, Remote- und Tagging-Strategie festlegen
+- Modul 6b: Git im Team vertiefen
+  - Rebase und sicheres Pushen
+  - Rückgängig machen und Fehler finden
+  - Teamregeln: Branch-Schutz, Konventionen und Versions-Tags
 - Modul 7: Git-Automatisierung mit Hooks und Actions
   - Lokalen Git-Hook einrichten
   - Commit-Vorlage einrichten
