@@ -1,5 +1,5 @@
 #!/bin/bash
-# Trägt die URL von origin (Repository ~/teamsite) als repoURL in die Argo-CD-Application ein und wendet sie an.
+# Trägt die URL von origin (Repository ~/teamsite) als repoURL in die Argo-CD-Application ein und wendet sie mit kubectl apply an.
 # Nur ausgeben statt anwenden: DRY_RUN=1 bash ~/handout/project/setup/argocd-application.sh
 set -euo pipefail
 
