@@ -63,12 +63,16 @@ git commit -m "GitOps-Manifeste ergänzen"
 git push
 ```
 
-Application anwenden: `~/handout/project/gitops-bootstrap/argocd-application.yaml` öffnen, `repoURL` auf `https://github.com/<github-konto>/teamsite.git` setzen und anwenden:
+Application anwenden:
 
 ```bash
-kubectl apply -f ~/handout/project/gitops-bootstrap/argocd-application.yaml
+bash ~/handout/project/setup/argocd-application.sh
 kubectl get applications -n argocd
 ```
+
+Das Skript liest die URL von `origin` im Repository `~/teamsite` (SSH-Adressen wandelt es in HTTPS um), trägt sie als `repoURL` in `argocd-application.yaml` ein und wendet die Application an. Mit `DRY_RUN=1` davor gibt es das Manifest nur aus.
+
+Von Hand: `~/handout/project/gitops-bootstrap/argocd-application.yaml` öffnen, `repoURL` auf `https://github.com/<github-konto>/teamsite.git` setzen und mit `kubectl apply -f` anwenden.
 
 ## 4. Kopiervorlagen für Tag 3
 

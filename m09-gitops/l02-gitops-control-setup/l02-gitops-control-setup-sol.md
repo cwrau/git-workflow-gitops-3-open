@@ -19,11 +19,13 @@ git commit -m "GitOps-Manifeste ergänzen"
 git push
 ```
 
-`argocd-application.yaml`, Feld `repoURL`, mit der tatsächlichen HTTPS- oder SSH-URL des eigenen `teamsite`-Repositorys ausfüllen, danach:
+Die `repoURL` ist die HTTPS-Adresse von `origin` des Repositorys `teamsite` (öffentlich, damit Argo CD ohne Zugangsdaten klont). Das Skript liest sie mit `git remote get-url origin`, trägt sie in die Application ein und wendet sie an:
 
 ```bash
-kubectl apply -f project/gitops-bootstrap/argocd-application.yaml
+bash ~/handout/project/setup/argocd-application.sh
 ```
+
+Von Hand: `repoURL` in `argocd-application.yaml` setzen, danach `kubectl apply -f project/gitops-bootstrap/argocd-application.yaml`.
 
 ## Aufgabe 5-6: Status prüfen
 
