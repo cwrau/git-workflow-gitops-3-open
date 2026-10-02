@@ -1,17 +1,13 @@
-# Lab 9.2 - Lösung: Push- vs. Pull-Bereitstellung vergleichen und lokalen GitOps-Kontrollmechanismus einrichten
+# Lab 9.2 - Lösung: Lokalen GitOps-Kontrollmechanismus einrichten
 
-## Aufgabe 1: Vergleich (Beispielantwort)
-
-Der bisherige GitHub-Actions-Workflow verbindet sich aktiv zu einem Zielsystem (z. B. über einen Deployment-Step) und überträgt die Änderung - er "pusht". Der Argo-CD-Ansatz dreht das um: ein im Cluster laufender Kontrollmechanismus beobachtet fortlaufend das Git-Repository und "zieht" sich Änderungen selbstständig, sobald sie erkannt werden, ohne dass der Cluster von außen erreichbar sein muss.
-
-## Aufgabe 2: Argo CD installieren
+## Aufgabe 1: Argo CD installieren
 
 ```bash
 kubectl create namespace argocd
 kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-## Aufgabe 3-4: Manifeste und Application einrichten
+## Aufgabe 2-3: Manifeste und Application einrichten
 
 ```bash
 git add project/gitops/
@@ -27,7 +23,7 @@ bash ~/handout/project/setup/argocd-application.sh
 
 Von Hand: `repoURL` in `argocd-application.yaml` setzen, danach `kubectl apply -f project/gitops-bootstrap/argocd-application.yaml`.
 
-## Aufgabe 5-6: Status prüfen
+## Aufgabe 4-5: Status prüfen
 
 ```bash
 kubectl get applications -n argocd
@@ -36,7 +32,7 @@ kubectl get pods -n teamsite-gitops
 
 Erwartete Ausgabe: `teamsite-gitops` mit `SYNC STATUS: Synced`, `HEALTH STATUS: Healthy`; ein Pod mit Präfix `site-greeter-` im Status `Running`.
 
-## Aufgabe 7: Self-Healing beobachten
+## Aufgabe 6: Self-Healing beobachten
 
 ```bash
 kubectl scale deployment site-greeter -n teamsite-gitops --replicas=2
@@ -47,7 +43,7 @@ kubectl get pods -n teamsite-gitops
 
 Unmittelbar nach dem Skalierungsbefehl erscheinen zwei Pods; nach kurzer Zeit (abhängig vom konfigurierten Synchronisationsintervall) reduziert Argo CD die Anzahl automatisch wieder auf den in `deployment.yaml` beschriebenen Zielwert von 1.
 
-## Aufgabe 8: Dienst aufrufen
+## Aufgabe 7: Dienst aufrufen
 
 ```bash
 kubectl port-forward svc/site-greeter -n teamsite-gitops 8080:80
