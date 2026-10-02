@@ -41,6 +41,14 @@ Weil ein produktionsnaher Schritt (z. B. eine simulierte Bereitstellung) nicht v
 ## Ablauf für dieses Lab
 
 ```yaml
+on:
+  push:
+    branches:
+      - main
+      - staging
+```
+
+```yaml
   deploy-staging:
     needs: test
     if: github.ref == 'refs/heads/staging'
@@ -52,6 +60,7 @@ Weil ein produktionsnaher Schritt (z. B. eine simulierte Bereitstellung) nicht v
         run: echo "Bereitstellung nach Staging simuliert für $(git rev-parse --short HEAD)"
 ```
 
+- Ohne `staging` im `push`-Trigger startet auf dem Branch `staging` kein Workflow, und `deploy-staging` kann dort nicht laufen.
 - `needs: test` sorgt dafür, dass der neue Job erst nach erfolgreichem Abschluss des bestehenden Test-Jobs startet.
 - Ein Job mit nicht erfüllter `if:`-Bedingung erscheint in der Läufer-Übersicht als "skipped", nicht als fehlgeschlagen.
 

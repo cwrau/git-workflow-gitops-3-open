@@ -3,6 +3,13 @@
 ## Aufgabe 1-3: Erweiterter Workflow
 
 ```yaml
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+
 jobs:
   test:
     # ... unverändert aus Lab 8.2 ...
@@ -17,6 +24,8 @@ jobs:
       - name: Simulierte Bereitstellung nach Staging
         run: echo "Bereitstellung nach Staging simuliert für $(git rev-parse --short HEAD)"
 ```
+
+Der Trigger `push` enthält jetzt auch `staging`. Ohne diesen Eintrag startet auf dem Branch `staging` kein Workflow, und `deploy-staging` könnte dort nie laufen.
 
 ```bash
 git add .github/workflows/lint.yaml
