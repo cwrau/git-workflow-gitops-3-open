@@ -10,10 +10,13 @@ if [ ! -d "$dest/.git" ]; then
   exit 1
 fi
 
-mkdir -p "$dest/project"
-cp -r "$src" "$dest/project/"
-
 cd "$dest"
+git switch main
+git pull --ff-only
+
+mkdir -p project
+cp -r "$src" project/
+
 git add project/gitops
 git diff --cached --quiet || git commit -m "GitOps-Manifeste ergänzen"
 git push

@@ -43,6 +43,10 @@ git push origin v0.1.0
 
 Der Tag erscheint auf GitHub unter "Releases" und "Tags".
 
+## Aufgabe 5: Schutz deaktivieren
+
+Im Ruleset den "Enforcement status" auf "Disabled" stellen oder das Ruleset löschen. Sonst werden die direkten Pushes auf `main` in den Labs 7.3 bis 9.3 abgelehnt.
+
 ## Erweiterung (Beispielantwort)
 
 Mit "Require review from Code Owners" muss die in `CODEOWNERS` eingetragene Person den Pull Request freigeben. Wer den Pull Request selbst eröffnet hat, kann ihn als Alleinverantwortliche oder Alleinverantwortlicher nicht selbst freigeben, GitHub zeigt den Merge dann als blockiert an, sofern kein Bypass erlaubt ist.

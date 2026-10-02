@@ -13,6 +13,7 @@ Das Repository `teamsite` auf GitHub, `main` ist gepusht, das Arbeitsverzeichnis
 3. Auf `feature/notizen` den Branch mit `git rebase main` auf den aktuellen `main` aufsetzen und den Graphen erneut ansehen.
 4. Mit `git rebase -i HEAD~3` die beiden "wip"-Commits in den ersten Commit einfügen: in der Liste bei den Zeilen 2 und 3 `pick` durch `fixup` ersetzen, speichern, schließen.
 5. `git push` ausführen und die Ablehnung (non-fast-forward) beobachten, dann `git push --force-with-lease` ausführen.
+6. Mit `git switch main` zurück auf `main` wechseln, die folgenden Labs laufen dort.
 
 ## Beobachtbarer Checkpoint
 

@@ -12,6 +12,7 @@ Das Repository `teamsite` ist öffentlich auf GitHub, `main` ist gepusht, das Ar
 2. Lokal auf `main` eine kleine Änderung committen (z. B. `echo "Test" >> notizen.md`) und mit `git push` pushen. Die Ablehnung beobachten, danach die Änderung mit `git reset --hard origin/main` wieder entfernen.
 3. Einen Branch `docs/codeowners` anlegen, die Datei `.github/CODEOWNERS` mit `* @<konto>` erstellen, mit der Nachricht `docs: CODEOWNERS ergänzen` committen und pushen. Auf GitHub einen Pull Request öffnen und mit "Squash and merge" mergen.
 4. Lokal `main` aktualisieren (`git switch main`, `git pull`) und mit `git tag v0.1.0` und `git push origin v0.1.0` eine Version markieren.
+5. Den Branch-Schutz wieder deaktivieren (Ruleset auf "Disabled" stellen oder löschen), damit die folgenden Labs wie vorgesehen direkt auf `main` pushen können.
 
 ## Beobachtbarer Checkpoint
 
@@ -22,6 +23,7 @@ Der direkte Push auf `main` wird abgelehnt; die `CODEOWNERS`-Datei liegt über e
 - Der Branch-Schutz verhindert direkte Pushes auf `main`.
 - Die Commit-Nachricht folgt dem Schema `<typ>: <beschreibung>` mit höchstens 50 Zeichen.
 - Der Tag liegt auf dem Stand von `main` nach dem Merge.
+- Der Branch-Schutz ist am Ende deaktiviert.
 
 ## Erweiterung (optional)
 

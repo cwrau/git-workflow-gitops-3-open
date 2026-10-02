@@ -49,6 +49,12 @@ git push --force-with-lease
 
 Der Push gelingt als "forced update", weil auf dem Remote nichts Neues lag.
 
+## Aufgabe 6: Zurück auf main
+
+```bash
+git switch main
+```
+
 ## Erweiterung (Beispielantwort)
 
 Bei einem Konflikt hält Git den Rebase an. Die Datei wird bereinigt, dann:
