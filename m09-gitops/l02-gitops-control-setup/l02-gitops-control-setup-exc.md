@@ -9,8 +9,8 @@ Ein lauffähiges lokales Kubernetes (kind oder Minikube), `kubectl` konfiguriert
 ## Aufgaben
 
 1. In 2-3 Sätzen den Unterschied zwischen dem bisherigen GitHub-Actions-Workflow (Modul 7/8, Push-basiert) und dem in diesem Lab einzurichtenden Argo-CD-Ansatz (Pull-basiert) in eigenen Worten beschreiben.
-2. Argo CD im lokalen Cluster installieren (Namespace `argocd` anlegen, offizielles Installationsmanifest anwenden).
-3. Die Manifeste `namespace.yaml`, `kustomization.yaml`, `deployment.yaml` und `service.yaml` aus `project/gitops/` in das eigene Repository committen (sofern noch nicht vorhanden) und pushen.
+2. Argo CD im lokalen Cluster installieren (Namespace `argocd` anlegen, offizielles Installationsmanifest anwenden). Skript: `bash ~/handout/project/setup/install-argocd.sh`.
+3. Die Manifeste `namespace.yaml`, `kustomization.yaml`, `deployment.yaml` und `service.yaml` aus `project/gitops/` in das eigene Repository committen (sofern noch nicht vorhanden) und pushen. Skript: `bash ~/handout/project/setup/gitops-manifests.sh`.
 4. `project/gitops-bootstrap/argocd-application.yaml` mit der tatsächlichen Repository-URL des eigenen `teamsite`-Repositorys ausfüllen und im Cluster anwenden. `spec.source.path` muss dabei auf den Ordner zeigen, in dem die Manifeste im eigenen Repository liegen.
 5. Mit `kubectl get applications -n argocd` bestätigen, dass die Argo-CD-Application `teamsite-gitops` existiert und synchronisiert ist.
 6. Mit `kubectl get pods -n teamsite-gitops` bestätigen, dass der Pod `site-greeter` läuft.
